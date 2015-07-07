@@ -1,0 +1,20 @@
+{
+  "name": "jimtest2",
+  "version": "1.0.0",
+  "description": "test project jim2",
+  "main": "jimtest2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim Z",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "connect-rest": "^1.9.4",
+    "express": "^4.13.0",
+    "express3-handlebars": "^0.5.2",
+    "jquery": "^2.1.4",
+    "restler": "^3.3.0",
+    "vhost": "^3.0.0"
+  }
+}

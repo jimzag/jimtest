@@ -1,0 +1,17 @@
+<h1>Welcome to the home page</h1>
+<p>{{data1}}</p>
+<button onclick="processClick('{{data1}}')">Button 2</button>
+
+{{! the page-specific java script.  The function called here: MyPost2 is in the shared file main.handlebars in the layouts folder}}
+{{#section 'script'}}
+<script>
+function processClick(arg1) {
+alert(arg1);
+alert(document.baseURI);
+var done=MyPost2(document.baseURI+'api/testpost');
+
+alert('after');
+
+}
+</script>
+{{/section}}

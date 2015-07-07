@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jim Test2</title>
+    {{{_sections.head}}}
+</head>
+<body>
+<header><img src="/img/logo.png" alt="our test logo">
+</header>
+    {{{body}}}
+    
+<script>
+function MyPost2(yourUrl){
+alert('in MyPost2');
+var Httpreq = new XMLHttpRequest(); // a new request
+Httpreq.open("POST",yourUrl,true);
+alert(yourUrl);
+Httpreq.setRequestHeader("Content-Type", "application/json");
+var tmp = JSON.stringify({name: "test name", time:"3pm"});
+alert(tmp);
+Httpreq.send(tmp);
+alert('sent');
+//return Httpreq.responseText;          
+}
+</script>
+    {{{_sections.script}}}
+</body>
+</html>
