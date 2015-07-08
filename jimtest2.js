@@ -37,9 +37,25 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.post('/api/testpost', function(req, res){
     console.log ("process msg");
-    var test_name=req.body.name;
+    var test_action=req.body.action;
     var test_time=req.body.time;
-    console.log ("name ="+test_name+"time="+test_time);
+    console.log ("action ="+test_action+"time="+test_time);
+    var tester = require ("./lib/display_action.js");
+    if (test_action == 'INIT') {
+        tester.initDisplay();
+        //code
+    }
+    else if (test_action == 'ADD') {
+        tester.textBox();
+        //code
+    }
+    else if (test_action == 'ORIGINAL') {
+        tester.originalTest();
+        //code
+    }
+    else {
+        tester.textBoxMove(test_action);
+    }
     res.end("yes");
 });
 
